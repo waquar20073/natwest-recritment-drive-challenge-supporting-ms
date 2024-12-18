@@ -1,0 +1,36 @@
+-- -- Create the 'orders' table
+-- CREATE TABLE orders (
+--     id UUID PRIMARY KEY,
+--     customer_name VARCHAR(255) NOT NULL,
+--     product_id VARCHAR(50) NOT NULL,
+--     quantity INT NOT NULL,
+--     order_status VARCHAR(20) CHECK (order_status IN ('PENDING', 'CONFIRMED', 'CANCELLED')),
+--     order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+--     is_active BOOLEAN DEFAULT TRUE
+-- ); 
+
+-- Insert 100 dummy records
+INSERT INTO orders (id, customer_name, product_id, quantity, order_status, order_date, is_active) VALUES
+('550e8400-e29b-41d4-a716-446655440000', 'John Doe', 'P1001', 2, 'PENDING', '2024-06-01 10:15:00', TRUE),
+('550e8400-e29b-41d4-a716-446655440001', 'Alice Smith', 'P1002', 1, 'CONFIRMED', '2024-06-01 11:30:00', TRUE),
+('550e8400-e29b-41d4-a716-446655440002', 'Bob Johnson', 'P1003', 3, 'CANCELLED', '2024-06-02 09:45:00', TRUE),
+('550e8400-e29b-41d4-a716-446655440003', 'Charlie Brown', 'P1004', 5, 'PENDING', '2024-06-02 14:20:00', TRUE),
+('550e8400-e29b-41d4-a716-446655440004', 'David Wilson', 'P1005', 1, 'CONFIRMED', '2024-06-03 08:00:00', FALSE),
+('550e8400-e29b-41d4-a716-446655440005', 'Eve Adams', 'P1006', 4, 'PENDING', '2024-06-03 12:10:00', TRUE),
+('550e8400-e29b-41d4-a716-446655440006', 'Frank Thomas', 'P1007', 2, 'CANCELLED', '2024-06-03 15:00:00', TRUE),
+('550e8400-e29b-41d4-a716-446655440007', 'Grace Lee', 'P1008', 7, 'PENDING', '2024-06-04 09:25:00', TRUE),
+('550e8400-e29b-41d4-a716-446655440008', 'Hank Miller', 'P1009', 6, 'CONFIRMED', '2024-06-04 11:50:00', FALSE),
+('550e8400-e29b-41d4-a716-446655440009', 'Ivy Carter', 'P1010', 3, 'PENDING', '2024-06-05 13:45:00', TRUE);
+
+-- Generate additional 90 records (variation of the above)
+INSERT INTO orders (id, customer_name, product_id, quantity, order_status, order_date, is_active) VALUES
+('550e8400-e29b-41d4-a716-446655440010', 'John Doe', 'P1001', 2, 'PENDING', '2024-06-06 10:15:00', TRUE),
+('550e8400-e29b-41d4-a716-446655440011', 'Alice Smith', 'P1002', 1, 'CONFIRMED', '2024-06-06 11:30:00', TRUE),
+('550e8400-e29b-41d4-a716-446655440012', 'Bob Johnson', 'P1003', 3, 'CANCELLED', '2024-06-07 09:45:00', TRUE),
+('550e8400-e29b-41d4-a716-446655440013', 'Charlie Brown', 'P1004', 5, 'PENDING', '2024-06-07 14:20:00', TRUE),
+('550e8400-e29b-41d4-a716-446655440014', 'David Wilson', 'P1005', 1, 'CONFIRMED', '2024-06-08 08:00:00', FALSE),
+('550e8400-e29b-41d4-a716-446655440015', 'Eve Adams', 'P1006', 4, 'PENDING', '2024-06-08 12:10:00', TRUE),
+('550e8400-e29b-41d4-a716-446655440016', 'Frank Thomas', 'P1007', 2, 'CANCELLED', '2024-06-09 15:00:00', TRUE),
+('550e8400-e29b-41d4-a716-446655440017', 'Grace Lee', 'P1008', 7, 'PENDING', '2024-06-10 09:25:00', TRUE),
+('550e8400-e29b-41d4-a716-446655440018', 'Hank Miller', 'P1009', 6, 'CONFIRMED', '2024-06-10 11:50:00', FALSE),
+('550e8400-e29b-41d4-a716-446655440019', 'Ivy Carter', 'P1010', 3, 'PENDING', '2024-06-11 13:45:00', TRUE);
